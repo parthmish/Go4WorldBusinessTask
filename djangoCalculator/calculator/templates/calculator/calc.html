@@ -14,8 +14,115 @@
 </div>
 {% endfor %}
 {% endif %}
-{% endblock content %}
-{% block js %}
-<script src="{% static 'calculator/js/calc-logic-v1.js' %}"></script>
-<script>$(document).ready(function () { setTimeout(function () { $('.message-alert').slideUp(); }, 2000) })</script>
-{% endblock js %}
+<div class="my-1 p-2 bg-light rounded shadow-sm">
+	<div class="row">
+		<div class="col">
+			<div class="card rounded shadow-sm">
+				<div class="card-body align-items-center d-flex justify-content-center">
+					<div class="container-sm my-1 p-2" style="background-color:rgba(137, 158, 189, 0.83);">
+						<div class="form-input">
+							<input type="text" class="form-control input-lg" id="expression" value="0" disabled>
+							<input type="text" class="form-control input-xs" id="result" value="0" disabled>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:rgb(238, 53, 53);">
+									(
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:rgb(238, 53, 53);">
+									)
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:rgb(238, 53, 53);">
+									AC
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:rgb(238, 53, 53);">
+									=
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">1</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">2</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">3</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:orange;">
+									+
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">4</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">5</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">6</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:orange;">
+									-
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">7</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">8</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">9</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:orange;">
+									*
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">0</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary">.</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg btn-secondary"> CE </div>
+							</div>
+							<div class="col-sm-3">
+								<div class="btn btn-lg" style="background-color:orange;">
+									/
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endblock content %}
+	{% block js %}
+	<script src="{% static 'calculator/js/calc-logic-v1.js' %}"></script>
+	<script>$(document).ready(function () { setTimeout(function () { $('.message-alert').slideUp(); }, 2000) })</script>
+	{% endblock js %}
